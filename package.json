@@ -1,0 +1,41 @@
+{
+  "name": "@kiserit/canvasapi",
+  "version": "0.1.0",
+  "description": "A library to interact with the Canvas LMS",
+  "main": "lib/canvasapi.cjs",
+  "module": "lib/canvasapi.mjs",
+  "browser": "lib/canvasapi.js",
+  "files": [
+    "lib"
+  ],
+  "author": "Kiser IT",
+  "license": "MIT",
+  "keywords": [],
+  "homepage": "https://github.com/kiserit/canvasapi#readme",
+  "bugs": {
+    "url": "https://github.com/kiserit/canvasapi/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kiserit/canvasapi.git"
+  },
+  "scripts": {
+    "build": "rollup -c --bundleConfigAsCjs",
+    "watch": "rollup -c -w --bundleConfigAsCjs",
+    "testall": "node ./tests/run-all",
+    "testcjs": "node ./tests/test-cjs",
+    "testesm": "node ./tests/test-esm",
+    "testcache": "node ./tests/test-cache",
+    "codegen": "node ./src/canvas-generator"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-terser": "^0.4.2",
+    "dotenv": "^16.0.3",
+    "ioredis": "^5.3.2",
+    "node-fetch": "^3.3.1",
+    "node-fetch-commonjs": "^3.2.4",
+    "rollup": "^3.22.0"
+  }
+}
